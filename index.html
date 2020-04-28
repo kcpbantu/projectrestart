@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Stripe Payment Page Recipe</title>
+    <title>Stripe Payment Page Receipt</title>
     <meta name="description" content="A demo of Stripe Payment Intents" />
 
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -21,14 +21,19 @@
         <div class="sr-container">
           <section class="container">
             <h1>One-time Donation</h1>
-            <button data-sku-id="sku_GU4JYXyvvRb2sX">Donate $5.00 once</button>
-            <button data-sku-id="sku_GU4KO8nfdg8G2Z">Donate $15.00 once</button>
-            <button data-sku-id="sku_GU4LB0wBViiYsm">Donate $50.00 once</button>
+            <button data-sku-id="sku_HBMnBQGYJHW8Dw">Donate RM5.00 once</button>
+            <button data-sku-id="sku_HBMov5OKOnuGMe">Donate RM10.00 once</button>
+            <button data-sku-id="sku_HBMofgdLumOY1E">Donate RM50.00 once</button>
+            <button data-sku-id="sku_HBMo1Gcji6cJ7X">Donate RM100.00 once</button>
           </section>
           <section class="container">
             <h1>Recurring Donation</h1>
-            <button data-plan-id="plan_GU4MXg0k0Uv1S6">
-              Donate $20.00 per month
+            <button data-plan-id="plan_HBMrV0skVmcSyU">
+              Donate RM50.00 per month
+            </button>
+            <h1>Recurring Donation</h1>
+            <button data-plan-id="plan_HBMsD1mYv6N2z3">
+              Donate RM100.00 per month
             </button>
           </section>
         </div>
@@ -38,10 +43,10 @@
     <div class="banner">
       <span>
         This is a
-        <a href="https://github.com/stripe-samples"> Stripe Sample </a> on how
+        <a href="https://github.com/kcpbantu"> Stripe Payment </a> on how
         to use Stripe Checkout on GitHub Pages.
         <a
-          href="https://github.com/stripe-samples/github-pages-stripe-checkout"
+          href="https://github.com/kcpbantu"
         >
           View code on GitHub.
         </a>
@@ -50,11 +55,11 @@
 
     <script>
       // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
-      var PUBLISHABLE_KEY = "pk_test_Tr8olTkdFnnJVywwhNPHwnHK00HkHV4tnP";
+      var PUBLISHABLE_KEY = "pk_live_y0w739w1dR6yZv3P8dfhFBCh00lEbc72UX";
       // Replace with the domain you want your users to be redirected back to after payment
       var DOMAIN = location.href.replace(/[^/]*$/, "");
 
-      if (PUBLISHABLE_KEY === "pk_test_Tr8olTkdFnnJVywwhNPHwnHK00HkHV4tnP") {
+      if (PUBLISHABLE_KEY === "pk_live_y0w739w1dR6yZv3P8dfhFBCh00lEbc72UX") {
         console.log(
           "Replace the hardcoded publishable key with your own publishable key: https://dashboard.stripe.com/test/apikeys"
         );
