@@ -1,102 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
   <head>
     <meta charset="utf-8" />
-    <title>Stripe Payment Page Receipt</title>
-    <meta name="description" content="A demo of Stripe Payment Intents" />
+    <title>Contoh Stripe FPX</title>
+    <meta name="description" content="Contoh Stripe FPX" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/global.css" />
-    <!-- Load Stripe.js on your website. -->
     <script src="https://js.stripe.com/v3/"></script>
+    <script src="/script.js" defer></script>
   </head>
 
   <body>
     <div class="sr-root">
-      <div class="sr-main" style="display: flex;">
-        <header class="sr-header">
-          <div class="sr-header__logo"></div>
-        </header>
-        <div class="sr-container">
-          <section class="container">
-            <h1>One-time Donation</h1>
-            <button data-sku-id="sku_HBMnBQGYJHW8Dw">Donate RM5.00 once</button>
-            <button data-sku-id="sku_HBMov5OKOnuGMe">Donate RM10.00 once</button>
-            <button data-sku-id="sku_HBMofgdLumOY1E">Donate RM50.00 once</button>
-            <button data-sku-id="sku_HBMo1Gcji6cJ7X">Donate RM100.00 once</button>
-          </section>
-          <section class="container">
-            <h1>Recurring Donation</h1>
-            <button data-plan-id="plan_HBMrV0skVmcSyU">
-              Donate RM50.00 per month
-            </button>
-            <br/>
-            <h1>Recurring Donation</h1>
-            <button data-plan-id="plan_HBMsD1mYv6N2z3">
-              Donate RM100.00 per month
-            </button>
-          </section>
+      <div class="sr-main">
+        <form id="payment-form" class="sr-payment-form">
+          <div class="sr-combo-inputs-row">
+            <label for="fpx-bank-element">
+              FPX Bank
+            </label>
+            <div class="sr-input sr-fpx-bank-element" id="fpx-bank-element">
+              <!-- A Stripe Element will be inserted here. -->
+            </div>
+          </div>
+          <div class="sr-field-error" id="error-message" role="alert"></div>
+          <button id="submit">
+            <div class="spinner hidden" id="spinner"></div>
+            <span id="button-text">Beli untuk </span
+            ><span id="order-amount"></span>
+          </button>
+        </form>
+        <div class="sr-result hidden">
+          <p>Hasil pembayaran - <a href="./">pergi lagi</a><br /></p>
+          <pre>
+            <code></code>
+          </pre>
         </div>
-        <div id="error-message"></div>
       </div>
     </div>
     <div class="banner">
       <span>
         This is a
-        <a href="https://github.com/kcpbantu/github.io"> Stripe Payment </a> on how
-        to use Stripe Checkout on GitHub Pages.
-        <a
-          href="https://github.com/kcpbantu/github.io"
-        >
+        <a href="https://github.com/stripe-samples"> Stripe Sample </a> on how
+        to accept a card payment on the web.
+        <a href="https://github.com/stripe-samples/web-elements-fpx-payment">
           View code on GitHub.
         </a>
       </span>
     </div>
-
-    <script>
-      // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
-      var PUBLISHABLE_KEY = "pk_live_y0w739w1dR6yZv3P8dfhFBCh00lEbc72UX";
-      // Replace with the domain you want your users to be redirected back to after payment
-      var DOMAIN = location.href.replace(/[^/]*$/, "");
-
-      if (PUBLISHABLE_KEY === "pk_live_y0w739w1dR6yZv3P8dfhFBCh00lEbc72UX") {
-        console.log(
-          "Replace the hardcoded publishable key with your own publishable key: https://dashboard.stripe.com/test/apikeys"
-        );
-      }
-
-      var stripe = Stripe(PUBLISHABLE_KEY);
-
-      // Handle any errors from Checkout
-      var handleResult = function(result) {
-        if (result.error) {
-          var displayError = document.getElementById("error-message");
-          displayError.textContent = result.error.message;
-        }
-      };
-
-      document.querySelectorAll("button").forEach(function(button) {
-        button.addEventListener("click", function(e) {
-          var skuId = e.target.dataset.skuId;
-          var planId = e.target.dataset.planId;
-          var items = skuId
-            ? [{ sku: skuId, quantity: 1 }]
-            : [{ plan: planId, quantity: 1 }];
-
-          // Make the call to Stripe.js to redirect to the checkout page
-          // with the sku or plan ID.
-          stripe
-            .redirectToCheckout({
-              items: items,
-              successUrl:
-                DOMAIN + "success.html?session_id={CHECKOUT_SESSION_ID}",
-              cancelUrl:
-                DOMAIN + "canceled.html?session_id={CHECKOUT_SESSION_ID}"
-            })
-            .then(handleResult);
-        });
-      });
-    </script>
   </body>
 </html>
