@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/global.css" />
     <script src="https://js.stripe.com/v3/"></script>
+    // Set your secret key. Remember to switch to your live secret key in production!
+// See your keys here: https://dashboard.stripe.com/account/apikeys
+\Stripe\Stripe::setApiKey('sk_test_PLiOcIjAm21cud2PbXj9dK9m00PlmPubfg');
+
+$payment_intent = \Stripe\PaymentIntent::create([
+  'payment_method_types' => ['fpx'],
+  'amount' => 100,
+  'currency' => 'myr',
+]);
   </head>
 
   <body>
