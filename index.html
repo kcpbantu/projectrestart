@@ -2,8 +2,8 @@
 <html lang="ms">
   <head>
     <meta charset="utf-8" />
-    <title>Stripe FPX</title>
-    <meta name="description" content="Stripe FPX" />
+    <title>KCPbantu FPX</title>
+    <meta name="description" content="KCPbantu FPX" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -73,14 +73,7 @@
 
       var stripe = Stripe('pk_live_y0w739w1dR6yZv3P8dfhFBCh00lEbc72UX');
 var elements = stripe.elements();
-      
-\Stripe\Stripe::setApiKey('pk_live_y0w739w1dR6yZv3P8dfhFBCh00lEbc72UX');
-
-$payment_intent = \Stripe\PaymentIntent::create([
-  'payment_method_types' => ['fpx'],
-  'amount' => 100,
-  'currency' => 'myr',
-]);
+   
 
       // Handle any errors from Checkout
       var handleResult = function(result) {
