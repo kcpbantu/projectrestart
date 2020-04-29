@@ -43,12 +43,12 @@
     <div class="banner">
       <span>
         This is a
-        <a href="https://kcpbantu.github.io/kcpbantu"> Stripe Payment </a> on how
-        to use Stripe Checkout on GitHub Pages.
+        <a href="https://kcpbantu.github.io/kcpbantu"> KCPbantu FPX Payment </a> on how
+        to donate to KCPbantu.org.
         <a
-          href="https://kcpbantu.github.io/kcpbantu"
+          href="https://kcpbantu.org"
         >
-          View code on GitHub.
+          View KCPbantu.org
         </a>
       </span>
     </div>
@@ -65,7 +65,16 @@
         );
       }
 
-      var stripe = Stripe(PUBLISHABLE_KEY);
+      var stripe = Stripe('pk_live_y0w739w1dR6yZv3P8dfhFBCh00lEbc72UX');
+var elements = stripe.elements();
+      
+\Stripe\Stripe::setApiKey('pk_live_y0w739w1dR6yZv3P8dfhFBCh00lEbc72UX');
+
+$payment_intent = \Stripe\PaymentIntent::create([
+  'payment_method_types' => ['fpx'],
+  'amount' => 100,
+  'currency' => 'myr',
+]);
 
       // Handle any errors from Checkout
       var handleResult = function(result) {
