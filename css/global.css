@@ -357,7 +357,7 @@ pre {
 
 /* KCPbantu styles – Brand-overrides, can split these out */
 :root {
-  --accent-color: #77ECBF;
+  --accent-color: #ed5f74;
   --headline-color: var(--accent-color);
   --logo-image: url("https://i.imgur.com/yKZwFq5.png");
 }
