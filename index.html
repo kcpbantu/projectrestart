@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/global.css" />
     <script src="https://js.stripe.com/v3/"></script>
-   
+   <script src="/script.js" defer></script>
    
   </head>
 
@@ -23,6 +23,15 @@
         <div class="sr-container">
           <section class="container">
             <h1>One-time Donation</h1>
+             <div class="sr-input sr-fpx-bank-element" id="fpx-bank-element">
+              stripe.api_key = 'pk_live_y0w739w1dR6yZv3P8dfhFBCh00lEbc72UX'
+
+payment_intent = stripe.PaymentIntent.create(
+  payment_method_types=['fpx'],
+  amount=5000,
+  currency='myr',
+)
+            </div>
             <button data-sku-id="sku_HBMnBQGYJHW8Dw">Donate RM5.00 once</button>
             <button data-sku-id="sku_HBMov5OKOnuGMe">Donate RM10.00 once</button>
             <button data-sku-id="sku_HBMofgdLumOY1E">Donate RM50.00 once</button>
