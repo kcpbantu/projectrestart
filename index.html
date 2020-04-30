@@ -20,18 +20,38 @@
         <header class="sr-header">
           <div class="sr-header__logo"></div>
         </header>
+        
+        <form id="payment-form">
+  <div class="form-row">
+    <div>
+      <label for="fpx-bank-element">
+        FPX Bank
+      </label>
+      <div id="fpx-bank-element">
+     import stripe
+stripe.api_key = "pk_live_y0w739w1dR6yZv3P8dfhFBCh00lEbc72UX"
+
+stripe.PaymentIntent.create(
+  amount=1000,
+  currency="myr",
+  payment_method_types=["card, fpx"],
+)
+      </div>
+    </div>
+  </div>
+
+  <button id="fpx-button" data-secret="{{ client_secret }}">
+    Submit Payment
+  </button>
+
+  <!-- Used to display form errors. -->
+  <div id="error-message" role="alert"></div>
+</form>
+        
         <div class="sr-container">
           <section class="container">
             <h1>One-time Donation</h1>
-             <div class="sr-input sr-fpx-bank-element" id="fpx-bank-element">
-              stripe.api_key = 'pk_live_y0w739w1dR6yZv3P8dfhFBCh00lEbc72UX'
-
-payment_intent = stripe.PaymentIntent.create(
-  payment_method_types=['fpx'],
-  amount=5000,
-  currency='myr',
-)
-            </div>
+           
             <button data-sku-id="sku_HBMnBQGYJHW8Dw">Donate RM5.00 once</button>
             <button data-sku-id="sku_HBMov5OKOnuGMe">Donate RM10.00 once</button>
             <button data-sku-id="sku_HBMofgdLumOY1E">Donate RM50.00 once</button>
