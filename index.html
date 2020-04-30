@@ -55,30 +55,7 @@
         <a href="https://www.kcpbantu.org"> KCPbantu.org </a> 
       </span>
     </div>
-
-    <script>
-      var stripe = Stripe('pk_live_y0w739w1dR6yZv3P8dfhFBCh00lEbc72UX');
-      var buyButton = document.getElementById('buy-button');
-      buyButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        stripe.redirectToCheckout({
-          sessionId: sessionId
-        });
-      });
-
-      var sessionId;
-      fetch('/create-session', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({})
-      }).then(function(r) {
-        return r.json();
-      }).then(function(response) {
-        sessionId = response.id;
-      });
-    </script>
+    
     <script>
       // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
       var PUBLISHABLE_KEY = "pk_live_y0w739w1dR6yZv3P8dfhFBCh00lEbc72UX";
