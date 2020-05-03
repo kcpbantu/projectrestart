@@ -13,7 +13,7 @@ var elements = stripe.elements();
 
 $payment_intent = \Stripe\PaymentIntent::create([
   'payment_method_types' => ['fpx'],
-  'amount' => 100,
+  'amount' => 1000,
   'currency' => 'myr',
 ])
       </div>
