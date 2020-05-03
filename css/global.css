@@ -1,3 +1,8 @@
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
 /* Variables */
 :root {
   --gray-offset: rgba(0, 0, 0, 0.03);
@@ -10,7 +15,7 @@
   --accent-color: #0066f0;
   --body-font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   --radius: 6px;
-  --logo-image: url("https://storage.googleapis.com/stripe-sample-images/KAVHOLM.svg");
+  --logo-image: url("https://i.imgur.com/FxYRhaE.png");
   --form-width: 650px;
 }
 
