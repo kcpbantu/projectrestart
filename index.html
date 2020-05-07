@@ -21,51 +21,26 @@
         <div class="sr-container">
           <section class="container">         
             <h1>One-time Donation</h1>
-<button
-  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  button data-sku-id="sku_HBMov5OKOnuGMe" role="link">
-  Donate RM10 once
-</button> 
-<button
-  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  button data-sku-id="sku_HC9oX6Mm64VRk6" role="link">
-  Donate RM20 once
-</button> 
-<button
-  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  button data-sku-id="sku_HBMofgdLumOY1E" role="link">
-  Donate RM50 once
-</button> 
-<button
-  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  button data-sku-id="sku_HBMo1Gcji6cJ7X" role="link">
-  Donate RM100 once
-</button> 
-          
+       
+<button data-sku-id="sku_HBMov5OKOnuGMe">Donate RM10 once</button>            
+<button data-sku-id="sku_HC9oX6Mm64VRk6">Donate RM20 once</button>
+            <button data-sku-id="sku_HBMofgdLumOY1E">Donate RM50 once</button>
+            <button data-sku-id="sku_HBMo1Gcji6cJ7X">Donate RM100 once</button>
           </section>  
           <section class="container">
             <h1>Recurring Donation</h1>
- <button
-  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  button data-plan-id="plan_HBcYLVgQbSTciB" role="link">
-  Donate RM5 per month
- </button>
- <button
-  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  button data-plan-id="plan_HBcYJi1m8OWIyr" role="link">
-  Donate RM10 per month
- </button>
- <button
-  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  button data-plan-id="plan_HBMrV0skVmcSyU" role="link">
-  Donate RM50 per month
- </button>
- <button
-  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
-  button data-plan-id="plan_HBMsD1mYv6N2z3" role="link">
-  Donate RM100 per month
-</button>
-            
+            <button data-plan-id="plan_HBcYLVgQbSTciB">
+              Donate RM5 per month
+            </button>
+            <button data-plan-id="plan_HBcYJi1m8OWIyr">
+              Donate RM10 per month
+            </button>
+            <button data-plan-id="plan_HBMrV0skVmcSyU">
+              Donate RM50 per month
+            </button>
+            <button data-plan-id="plan_HBMsD1mYv6N2z3">
+              Donate RM100 per month
+            </button>
            </section>
           <div id="error-message"></div>
         </div>
@@ -76,6 +51,107 @@
         <a href="https://www.kcpbantu.org"> KCPbantu.org </a> 
       </span>
     </div>
+    
+    <script>
+      // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
+      var PUBLISHABLE_KEY = "pk_live_y0w739w1dR6yZv3P8dfhFBCh00lEbc72UX";
+      // Replace with the domain you want your users to be redirected back to after payment
+      var DOMAIN = location.href.replace(/[^/]*$/, "");
+      var skuId = "sku_HBMov5OKOnuGMe";
+      var skuId = "sku_HC9oX6Mm64VRk6";
+      var skuId = "sku_HBMofgdLumOY1E";
+      var skuId = "sku_HBMo1Gcji6cJ7X";
+      var planId = "plan_HBcYLVgQbSTciB";
+      var planId = "plan_HBcYJi1m8OWIyr";
+      var planId = "plan_HBMrV0skVmcSyU";
+      var planId = "plan_HBMsD1mYv6N2z3";
+
+      if (PUBLISHABLE_KEY === "pk_live_y0w739w1dR6yZv3P8dfhFBCh00lEbc72UX") {
+        console.log(
+          "Replace the hardcoded publishable key with your own publishable key: https://dashboard.stripe.com/test/apikeys"
+        );
+      }
+
+            if (skuId === "sku_HBMov5OKOnuGMe") {
+        console.log(
+          "Replace the hardcoded SKU ID with your own SKU: https://stripe.com/docs/api/skus"
+        );
+      }
+      
+                  if (skuId === "sku_HC9oX6Mm64VRk6") {
+        console.log(
+          "Replace the hardcoded SKU ID with your own SKU: https://stripe.com/docs/api/skus"
+        );
+      }
+      
+                  if (skuId === "sku_HBMofgdLumOY1E") {
+        console.log(
+          "Replace the hardcoded SKU ID with your own SKU: https://stripe.com/docs/api/skus"
+        );
+      }
+      
+                  if (skuId === "sku_HBMo1Gcji6cJ7X") {
+        console.log(
+          "Replace the hardcoded SKU ID with your own SKU: https://stripe.com/docs/api/skus"
+        );
+      }
+      
+                        if (planId === "plan_HBcYLVgQbSTciB") {
+        console.log(
+          "Replace the hardcoded SKU ID with your own SKU: https://stripe.com/docs/api/skus"
+        );
+      }
+      
+                              if (planId === "plan_HBcYJi1m8OWIyr") {
+        console.log(
+          "Replace the hardcoded SKU ID with your own SKU: https://stripe.com/docs/api/skus"
+        );
+      }
+      
+                              if (planId === "plan_HBMrV0skVmcSyU") {
+        console.log(
+          "Replace the hardcoded SKU ID with your own SKU: https://stripe.com/docs/api/skus"
+        );
+      }
+      
+                              if (planId === "plan_HBMsD1mYv6N2z3") {
+        console.log(
+          "Replace the hardcoded SKU ID with your own SKU: https://stripe.com/docs/api/skus"
+        );
+      }
+      
+    var stripe = Stripe(PUBLISHABLE_KEY);
+
+      // Handle any errors from Checkout
+      var handleResult = function(result) {
+        if (result.error) {
+          var displayError = document.getElementById("error-message");
+          displayError.textContent = result.error.message;
+        }
+      };
+
+      document.querySelectorAll("button").forEach(function(button) {
+        button.addEventListener("click", function(e) {
+          var skuId = e.target.dataset.skuId;
+          var planId = e.target.dataset.planId;
+          var items = skuId
+            ? [{ sku: skuId, quantity: 1 }]
+            : [{ plan: planId, quantity: 1 }];
+
+          // Make the call to Stripe.js to redirect to the checkout page
+          // with the sku or plan ID.
+          stripe
+            .redirectToCheckout({
+              items: items,
+              successUrl:
+                DOMAIN + "success.html?session_id={CHECKOUT_SESSION_ID}",
+              cancelUrl:
+                DOMAIN + "canceled.html?session_id={CHECKOUT_SESSION_ID}"
+            })
+            .then(handleResult);
+        });
+      });
+    </script>
     
     <script>
 (function() {
