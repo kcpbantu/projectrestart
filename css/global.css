@@ -16,7 +16,7 @@
   --body-font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   --radius: 6px;
   --logo-image: url("https://i.imgur.com/8uMUf6A.png");
-  --form-width: 650px;
+  --form-width: 1024px;
 }
 
 /* Base */
@@ -79,6 +79,7 @@ h4 {
   justify-content: center;
   height: 100%;
   align-self: center;
+  text-align: center;
 }
 .sr-main {
   width: var(--form-width);
