@@ -576,7 +576,7 @@ input[type="number"]::-webkit-outer-spin-button {
   box-sizing: border-box;
   padding: 15px;
   line-height: 1.15;
-  position: relative;
+  position: fixed;
   bottom: 2vh;
   left: 0;
   right: 0;
