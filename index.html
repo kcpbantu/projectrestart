@@ -157,49 +157,5 @@
       });
     </script>
     
-    <script>
-(function() {
-  var stripe = Stripe('pk_live_y0w739w1dR6yZv3P8dfhFBCh00lEbc72UX');
-
-  var checkoutButton = document.getElementById('checkout-button-sku_HBMov5OKOnuGMe');
-  var checkoutButton = document.getElementById('checkout-button-sku_HC9oX6Mm64VRk6');
-  var checkoutButton = document.getElementById('checkout-button-sku_HBMofgdLumOY1E');
-  var checkoutButton = document.getElementById('checkout-button-sku_HBMo1Gcji6cJ7X');
-  var checkoutButton = document.getElementById('checkout-button-plan_HBcYLVgQbSTciB');
-  var checkoutButton = document.getElementById('checkout-button-plan_HBcYJi1m8OWIyr');
-  var checkoutButton = document.getElementById('checkout-button-plan_HBMrV0skVmcSyU');
-  var checkoutButton = document.getElementById('checkout-button-plan_HBMsD1mYv6N2z3');
-  checkoutButton.addEventListener('click', function () {
-    // When the customer clicks on the button, redirect
-    // them to Checkout.
-    stripe.redirectToCheckout({
-      items: [{sku: 'sku_HBMov5OKOnuGMe', quantity: 1}],
-      items: [{sku: 'sku_HC9oX6Mm64VRk6', quantity: 1}],
-      items: [{sku: 'sku_HBMov5OKOnuGMe', quantity: 1}],
-      items: [{sku: 'sku_HBMo1Gcji6cJ7X', quantity: 1}],
-      items: [{sku: 'plan_HBcYLVgQbSTciB', quantity: 1}],
-      items: [{sku: 'plan_HBcYJi1m8OWIyr', quantity: 1}],
-      items: [{sku: 'plan_HBMrV0skVmcSyU', quantity: 1}],
-      items: [{sku: 'plan_HBMsD1mYv6N2z3', quantity: 1}],
-      
-      // Do not rely on the redirect to the successUrl for fulfilling
-      // purchases, customers may not always reach the success_url after
-      // a successful payment.
-      // Instead use one of the strategies described in
-      // https://stripe.com/docs/payments/checkout/fulfillment
-      successUrl: 'https://www.kcpbantu.org/success',
-      cancelUrl: 'https://www.kcpbantu.org/canceled',
-    })
-    .then(function (result) {
-      if (result.error) {
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer.
-        var displayError = document.getElementById('error-message');
-        displayError.textContent = result.error.message;
-      }
-    });
-  });
-})();
-</script>
   </body>
 </html>
