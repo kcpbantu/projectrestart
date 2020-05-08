@@ -95,6 +95,8 @@ h4 {
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 .sr-legal-text {
   color: var(--gray-light);
@@ -368,7 +370,7 @@ pre {
 :root {
   --accent-color: #ed5f74;
   --headline-color: var(--accent-color);
-  --logo-image: url("https://i.imgur.com/yKZwFq5.png");
+  --logo-image: url("https://i.imgur.com/8uMUf6A.png");
 }
 
 .pasha-image-stack {
