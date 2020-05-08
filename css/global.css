@@ -347,6 +347,7 @@ pre {
     justify-content: flex-start;
     padding: 48px 20px;
     min-width: 320px;
+    align-content: center;
   }
 
   .sr-header__logo {
