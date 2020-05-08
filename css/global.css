@@ -1,6 +1,6 @@
 @viewport {
   width: device-width ;
-  zoom: 2.0 ;
+  zoom: 1.0 ;
 }
 
 /* Variables */
@@ -34,7 +34,9 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+h7,
+h8 {
   color: var(--body-color);
   margin-top: 2px;
   margin-bottom: 4px;
@@ -487,7 +489,7 @@ pre {
   padding: 32px 28px;
   display: flex;
   flex-direction: column;
-  max-width: 400px;
+  max-width: 500px;
   min-width: 250px;
 }
 
@@ -569,9 +571,9 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .banner {
-  max-width: 500px;
+  max-width: 100px;
   margin: 0 auto;
-  padding: 0 22px;
+  padding: 0 12px;
   font-size: 14px;
   background: white;
   color: #6a7c94;
