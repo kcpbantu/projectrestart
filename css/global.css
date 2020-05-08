@@ -408,6 +408,10 @@ pre {
   transform: translate(64px, -50px);
   opacity: 1;
 }
+.pasha-image-stack img:nth-child(4) {
+  transform: translate(122px, -100px);
+  opacity: 1;
+}
 
 /* todo: spinner/processing state, errors, animations */
 
