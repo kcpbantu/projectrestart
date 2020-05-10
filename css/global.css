@@ -15,7 +15,7 @@
   --accent-color: #0066f0;
   --body-font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   --radius: 6px;
-  --logo-image: url("https://i.imgur.com/8uMUf6A.png");
+  --logo-image: url("https://i.imgur.com/WCrOcWC.png");
   --form-width: 650px;
 }
 
@@ -371,7 +371,7 @@ pre {
 :root {
   --accent-color: #ed5f74;
   --headline-color: var(--accent-color);
-  --logo-image: url("https://i.imgur.com/8uMUf6A.png");
+  --logo-image: url("https://i.imgur.com/WCrOcWC.png");
 }
 
 .pasha-image-stack {
